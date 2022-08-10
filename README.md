@@ -1,6 +1,6 @@
-# Docker + Nginx + Angular
+# Docker + Nginx + Angular + Bootstrap 3
 
-This is a base starter docker configuration for an NGINX + Angular environment for simple
+This is a base starter docker configuration for an NGINX + Angular + Bootstrap3 environment for simple
 training projects.
 
 ## Index
@@ -13,6 +13,7 @@ These are the tools that are installed manually into the nginx image via the Doc
 * **Nginx** - The base server we are using within the docker container. We always install the latest version of Nginx via the official Docker distro via DockerHub.
 * **Node JS** - Node package manager we use to install Angular CLI with.
 * **Angular CLI** - The "command line interface" we use to install a fresh install of Angular into this project's app directory documented below.
+* **Bootstrap 3** - Used in training course for quick styling of html elements.
 
 
 ## Install Angular App
@@ -41,7 +42,7 @@ To install a fresh Angular app, we will used the pre-installed `angular-cli` too
 4. After you have installed the Angular project and filled out all of the script's prompts, you should be able to start serving your angular app within the container by running:
 
     ```
-    ng serve
+    ng serve --poll 2000
     ```
 
 5. From there, you should be able to open your freshly installed Angular app by opening `http://localhost:8080` in your browser.
