@@ -1,7 +1,8 @@
 <div class="d-flex">
   <h2 class="m-0">Servers</h2>
-  <button class="btn btn-primary ms-auto" [disabled]="!allowNewServer">Add Server</button>
+  <button class="btn btn-primary ms-auto" [disabled]="!allowNewServer" (click)="onAddServerClick()">Add Server</button>
 </div>
+<div class="alert alert-info my-20">{{ serverCreationStatus }}</div>
 <hr/>
 <app-server></app-server>
 <app-server></app-server>
