@@ -1,0 +1,16 @@
+<div class="jumbotron mx-auto mb-40" style="max-width: 720px;">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 d-flex align-items-start justify-content-center">
+      <div class="thumbnail d-inline-block">
+        <img src="{{ profileImage }}" width="150" height="150" />
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8">
+      <h2 class="m-0">{{ fullname }}</h2>
+      <h3>{{ username }}</h3>
+      <p>
+        <ng-content></ng-content>
+      </p>
+    </div>
+  </div>
+</div>

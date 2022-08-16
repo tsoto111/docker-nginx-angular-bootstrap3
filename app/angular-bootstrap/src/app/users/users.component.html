@@ -1,0 +1,38 @@
+<div class="d-flex align-items-center">
+  <h2 class="m-0">Create User</h2>
+  <div class="form-inline ml-auto">
+    <div class="form-group">
+      <input class="form-control" type="text" (input)="onUpdateUsername($event)" />
+      <button class="btn btn-primary" type="button">Add User</button>
+    </div>
+  </div>
+</div>
+
+<!-- Other Possible User Profile Images...
+https://api.lorem.space/image/face?w=150&h=150&hash=9D9539E7
+https://api.lorem.space/image/face?w=150&h=150&hash=BDC01094
+https://api.lorem.space/image/face?w=150&h=150&hash=7F5AE56A
+https://api.lorem.space/image/face?w=150&h=150&hash=4F32C4CF
+https://api.lorem.space/image/face?w=150&h=150&hash=B0E33EF4
+https://api.lorem.space/image/face?w=150&h=150&hash=2D297A22
+-->
+
+<app-user class="mt-40 d-block" setFullname="New User" [setUsername]="newUsername" setProfileImage="https://api.lorem.space/image/face?w=150&h=150&hash=225E6693">
+  Marfa tbh tacos swag kinfolk praxis sus retro lumbersexual trust fund.
+  Messenger bag heirloom disrupt fingerstache plaid, roof party 3 wolf
+  moon vaporware seitan deep v 8-bit.
+</app-user>
+
+<hr/>
+<h2>Existing Users</h2>
+<app-user setFullname="Travis Gambino" setUsername="travisg@example.com" setProfileImage="https://api.lorem.space/image/face?w=150&h=150&hash=8B7BCDC2">
+  Mukbang blog 3 wolf moon vaporware craft beer affogato.
+</app-user>
+<app-user setFullname="Owain Hawk" setUsername="owainh@example.com" setProfileImage="https://api.lorem.space/image/face?w=150&h=150&hash=500B67FB">
+  Tacos DIY four dollar toast direct trade lumbersexual taxidermy austin fashion axe.
+</app-user>
+<app-user setFullname="Trisha Luv" setUsername="trishal@example.com" setProfileImage="https://api.lorem.space/image/face?w=150&h=150&hash=A89D0DE6">
+  I'm baby +1 asymmetrical unicorn occupy, art party ethical pabst pinterest
+  chia chillwave.
+</app-user>
+
