@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.d-flex {
+  display: flex;
+}
+
+.ms-auto {
+  margin-left: auto;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.py-20 {
+  padding: 20px 0;
+}
