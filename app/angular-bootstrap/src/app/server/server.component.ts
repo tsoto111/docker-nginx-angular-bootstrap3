@@ -18,7 +18,7 @@ export class ServerComponent {
    *
    * @returns {string} The pre-set serverStatus value in this class.
    */
-  getServerStatus() {
+  getServerStatus(): string {
     return this.serverStatus;
   }
 }
