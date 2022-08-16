@@ -1,6 +1,11 @@
 <div class="d-flex">
   <h2 class="m-0">Servers</h2>
-  <button class="btn btn-primary ms-auto" [disabled]="!allowNewServer" (click)="onAddServerClick()">Add Server</button>
+  <div class="form-inline ms-auto">
+    <div class="form-group">
+      <input type="text" class="form-control ms-auto" placeholder="Server Name" (input)="onUpdateServerName($event)" />
+      <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onAddServerClick()">Add Server</button>
+    </div>
+  </div>
 </div>
 <div class="alert alert-info my-20">{{ serverCreationStatus }}</div>
 <hr/>
