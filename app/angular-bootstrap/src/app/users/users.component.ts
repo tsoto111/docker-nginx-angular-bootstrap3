@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
    * @returns {boolean} True if has username and false if blank.
    */
   hasUsername = (): boolean => {
-    if (this.newUsername !== '') return true;
+    if (this.newUsername === '') return true;
 
     return false
   }
