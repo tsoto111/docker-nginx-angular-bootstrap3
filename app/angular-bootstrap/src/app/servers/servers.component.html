@@ -7,7 +7,7 @@
     </div>
   </div>
 </div>
-<div class="alert alert-info my-20">{{ serverCreationStatus }}</div>
+<div class="alert alert-info my-20" *ngIf="serverCreated">{{ serverCreationStatus }}</div>
 <hr/>
 <app-server></app-server>
 <app-server></app-server>
