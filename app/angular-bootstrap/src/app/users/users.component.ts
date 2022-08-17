@@ -6,16 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
-  newUsername: string = 'newusername@example.com';
+  newUsername: string = '';
 
   constructor() { }
 
   ngOnInit(): void {}
 
-  onUpdateUsername(event: Event) {
-    const usernameInputElement = <HTMLInputElement>event.target;
+  /**
+   * Has Username
+   *
+   * This function tells us if the username input is empty or not.
+   *
+   * @returns {boolean} True if has username and false if blank.
+   */
+  hasUsername = (): boolean => {
+    if (this.newUsername !== '') return true;
 
-    this.newUsername = usernameInputElement.value;
+    return false
+  }
+
+  /**
+   * Reset Username
+   *
+   * Will empty the "newUsername" value.
+   *
+   * @returns {void}
+   */
+  resetUsername = (): void => {
+    this.newUsername = '';
   }
 }
