@@ -7,7 +7,10 @@
     </div>
   </div>
 </div>
-<div class="alert alert-info my-20" *ngIf="serverCreated">{{ serverCreationStatus }}</div>
+<div class="alert alert-success my-20" *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</div>
+<ng-template #noServer>
+  <div class="alert alert-info my-20">No server was created</div>
+</ng-template>
 <hr/>
 <app-server></app-server>
 <app-server></app-server>
