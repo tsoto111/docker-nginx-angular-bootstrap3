@@ -3,13 +3,17 @@
   <div class="form-inline ms-auto">
     <div class="form-group">
       <input type="text" class="form-control ms-auto" [(ngModel)]="serverName" />
-      <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onAddServerClick()">Add Server</button>
+      <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onAddServerClick()">
+        Add Server
+      </button>
     </div>
   </div>
 </div>
 <div class="alert alert-success my-20" *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</div>
 <ng-template #noServer>
-  <div class="alert alert-info my-20">No server was created</div>
+  <div class="alert alert-info my-20">
+    No server was created
+  </div>
 </ng-template>
 <hr/>
 <table class="table">
@@ -19,9 +23,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="app-server"></tr>
-    <tr class="app-server"></tr>
-    <tr class="app-server"></tr>
+    <tr class="app-server" *ngFor="let server of servers"></tr>
   </tbody>
 </table>
-
