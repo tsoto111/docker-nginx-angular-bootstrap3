@@ -4,6 +4,9 @@
     <hr/>
     <app-password-input label="New Password" (getPasswordValueEvent)="getPasswordValue($event)"></app-password-input>
     <app-password-input label="Confirm Password" (getPasswordValueEvent)="getConfirmPasswordValue($event)"></app-password-input>
+    <div *ngIf="(passwordValue !== '' && confirmPasswordValue !== '') && !doPasswordsMatch()" class="alert alert-warning">
+      Passwords do not match!
+    </div>
     <button class="btn btn-primary" type="button" [disabled]="!doPasswordsMatch()">Submit</button>
   </article>
 </section>
