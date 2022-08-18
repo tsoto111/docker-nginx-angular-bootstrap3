@@ -2,7 +2,8 @@
   <article class="login-content">
     <h2>Update Password</h2>
     <hr/>
-    <app-password-input label="New Password"></app-password-input>
-    <app-password-input label="Confirm Password"></app-password-input>
+    <app-password-input label="New Password" (getPasswordValueEvent)="getPasswordValue($event)"></app-password-input>
+    <app-password-input label="Confirm Password" (getPasswordValueEvent)="getConfirmPasswordValue($event)"></app-password-input>
+    <button class="btn btn-primary" type="button" [disabled]="!doPasswordsMatch()">Submit</button>
   </article>
 </section>

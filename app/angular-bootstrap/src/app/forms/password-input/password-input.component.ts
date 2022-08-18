@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-password-input',
@@ -7,13 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PasswordInputComponent implements OnInit {
   @Input() label: string = ''
+  @Output() getPasswordValueEvent = new EventEmitter<string>();
 
+  passwordValue: string = '';
   showPassword: boolean = false;
   showHideCount: number = 0;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  getPasswordValue = () => {
+    this.getPasswordValueEvent.emit(this.passwordValue)
+  }
 
   /**
    * Get Password Input Type
